@@ -1,0 +1,16 @@
+version: "3"
+
+services:
+  myservice:
+    image: mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14
+    # working_dirディレクトリ下にホストのディレクトリをマウントします
+    working_dir: /workspace
+    volumes:
+      # node_modulesディレクトリはホスト側に渡さないようにDockerのvolume内に格納します
+      - node-modules:/workspace/node_modules
+      - .:/workspace:cached
+    # コンテナを起動させ続ける
+    tty: true
+
+volumes:
+  node-modules:
