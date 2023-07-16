@@ -22,9 +22,11 @@
                 }
             },
             "extensions": [
-                "dbaeumer.vscode-eslint",
-                "esbenp.prettier-vscode"
-            ]
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"Vue.volar",
+				"Vue.vscode-typescript-vue-plugin"
+			]
         }
     },
     "postCreateCommand": "bash ./.devcontainer/postCreateCommand.sh",

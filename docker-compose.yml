@@ -7,7 +7,6 @@ services:
     working_dir: /workspace
     volumes:
       # node_modulesディレクトリはホスト側に渡さないようにDockerのvolume内に格納します
-      - node-modules:/workspace/node_modules
       - .:/workspace:cached
     # コンテナを起動させ続ける
     tty: true
